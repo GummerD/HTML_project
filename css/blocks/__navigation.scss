@@ -1,0 +1,133 @@
+@import "__variables.scss";
+
+.top_Nav {
+    height: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center  
+}
+
+.top_Nav_item {
+    display: flex;
+    margin-right: 30px;
+    position: relative;
+    z-index: 0;
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #222222;
+        border-bottom: 4px solid transparent;
+        padding-bottom: 9px;
+        &:hover{
+            color:#ef5b70;
+            border-bottom: #ef5b70 4px solid;
+            padding-bottom: 9px;
+            text-align: center;
+            transform: scale(1.1, 1.1);
+            transition-duration: 0,9s;
+        }
+    }
+    &:hover .drop{
+        display: flex;
+        position: absolute;
+        margin-top: 31.5px;
+    }
+}
+
+.top_Nav_item_left:hover .drop{
+    right: 0;
+}
+
+.drop{
+    display: none;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #fff;
+    width: 740px;
+    height: 310px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.drop_col{
+    width: 200px;
+    margin-left: 20px;
+}
+
+.drop_header{
+    border-bottom: 1px solid rgb(175, 175, 175);
+    font-size: 10px;
+    line-height: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #232323; 
+}
+
+.drop_list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.drop_link{
+    text-transform: none !important;
+    font-size: 10px;
+    line-height: 25px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #646464;
+}
+
+.middle_nav-breadcrumb_fone{
+    display: flex;
+    height: 148px;
+    background-color: $project_fone_color;
+    background-size: cover;
+}
+
+.middle_nav-breadcrumb{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    text-transform: uppercase;
+    h1{
+        font-size: 24px;
+        font-weight: bold;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 20px;
+        text-align: center;
+        color: $project_pink_color;
+    }
+    a,li{
+        display: inline-block;
+        text-decoration: none;
+        list-style-type: none;
+        font-size: 14px;
+        font-weight: 700;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 20px;
+        text-align: center;
+        color: black;
+        &:hover{
+            color:$project_pink_color;
+        }
+    }
+}
+ 
+.breadcrumb > li + li:before{
+    padding-right: 0.4px;
+    content: "/";
+}
+
+.active{
+    color: $project_pink_color !important;
+}
